@@ -13,7 +13,7 @@ from subprocess import run
 from datetime import datetime
 from .storage import Storage
 from shutil import rmtree
-from .util import events, humanbytes, progress, time_formatter, sync
+from .util import _events, humanbytes, progress, time_formatter, sync
 import os
 import time
 
@@ -84,7 +84,7 @@ class Userbot(TelegramClient):
         name = f"_UserbotModules.{self._name}.{shortname}"
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
-        mod.events = events
+        mod.events = _events
         mod.client = self
         mod.humanbytes = humanbytes
         mod.progress = progress

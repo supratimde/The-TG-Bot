@@ -36,6 +36,6 @@ class ENV(object):
     UNLOCKED_CHATS = os.environ.get("UNLOCKED_CHATS", [])
 
 
-class _ENV(object):
+class _ENV(ENV):
     pass
     # Add values here to use for development

@@ -23,7 +23,7 @@ def sync(self, func, *args, **kwargs):
     return asyncio.get_event_loop().create_task(func(*args, **kwargs))
 
 
-def events(pattern=None, allow_sudo=False, incoming=False, func=None, **args):
+def _events(pattern=None, allow_sudo=False, incoming=False, func=None, **args):
     """
     Simpler function to handle events without having to import telethon.events
     and also enables command_handler functionality
