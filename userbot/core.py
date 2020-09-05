@@ -18,7 +18,7 @@ if not os.path.exists(ENV.DOWNLOAD_DIRECTORY):
     os.mkdir(ENV.DOWNLOAD_DIRECTORY)
 
 
-@client.on(register(pattern="reload (?P<shortname>\w+)$"))
+@client.on(events(pattern="reload (?P<shortname>\w+)$"))
 async def reload_module(event):
     await event.delete()
     shortname = event.pattern_match["shortname"]
@@ -36,7 +36,7 @@ async def reload_module(event):
         await event.respond(f"Failed to (re)load {shortname}: {e}")
 
 
-@client.on(register(pattern="(?:unload) (?P<shortname>\w+)$"))
+@client.on(events(pattern="(?:unload) (?P<shortname>\w+)$"))
 async def remove_module(event):
     await event.delete()
     shortname = event.pattern_match["shortname"]
@@ -51,7 +51,7 @@ async def remove_module(event):
     await msg.delete()
 
 
-@client.on(register(pattern="load"))
+@client.on(events(pattern="load"))
 async def install_module(event):
     if event.fwd_from:
         return
@@ -82,7 +82,7 @@ async def install_module(event):
     await event.delete()
 
 
-@client.on(register(pattern="share (.*)"))
+@client.on(events(pattern="share (.*)"))
 async def share_module(event):
     if event.fwd_from:
         return
@@ -112,7 +112,7 @@ async def share_module(event):
         await mone.delete()
 
 
-@client.on(register(pattern="help ?(.*)"))
+@client.on(events(pattern="help ?(.*)"))
 async def help(event):
     if event.fwd_from:
         return
@@ -142,7 +142,7 @@ async def help(event):
         await event.edit(msg)
 
 
-@client.on(register(pattern="alive ?(.*)", allow_sudo=True))
+@client.on(events(pattern="alive ?(.*)", allow_sudo=True))
 async def alive(event):
     if event.fwd_from:
         return
