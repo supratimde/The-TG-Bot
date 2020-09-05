@@ -4,7 +4,7 @@
 
 from io import BytesIO
 from PIL import Image
-from telethon import events
+import telethon
 
 
 @client.on(events(pattern="quotly ?(.*)"))
@@ -26,7 +26,7 @@ async def handler(event):
             if input_str:
                 response = await silently_send_message(bot_conv, quote)
             elif reply:
-                response = bot_conv.wait_event(events.NewMessage(
+                response = bot_conv.wait_event(telethon.events.NewMessage(
                     incoming=True, from_users=1031952739))
                 await client.forward_messages(username, quote)
                 response = await response

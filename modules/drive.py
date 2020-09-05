@@ -12,7 +12,7 @@ import math
 import os
 import time
 from datetime import datetime
-from telethon import events
+import telethon
 from mimetypes import guess_type
 from apiclient.discovery import build
 from apiclient.http import MediaFileUpload
@@ -115,7 +115,7 @@ async def create_token_file(token_file, event):
     authorize_url = flow.step1_get_authorize_url()
     async with event.client.conversation(ENV.LOGGER_GROUP) as conv:
         await conv.send_message(f"Go to the following link in your browser: {authorize_url} and reply the code")
-        response = conv.wait_event(events.NewMessage(
+        response = conv.wait_event(telethon.events.NewMessage(
             outgoing=True,
             chats=ENV.LOGGER_GROUP
         ))
