@@ -25,17 +25,20 @@ async def handler(event):
     lang = lang.strip()
     translator = Translator()
     try:
-        translated = translator.translate(text, dest=lang)
+        try:
+            translated = translator.translate(text, dest=lang)
+        except ValueError:
+            return await event.edit(f"`Language code {lang} is invalid.`")
         output_str = f"**Translated** from {translated.src} to {lang}:\n`{translated.text}`"
         await event.edit(output_str)
     except Exception as ex:
-        await event.edit("`Looks like the google translator is down, please try again later.`")
+        await event.edit("`Looks like the google translator library is down, please try again later.`")
         logger.info(str(ex))
 
 
 ENV.HELPER.update({
     "translate": "\
-```.tr <language_code>``` [as a reply to target message]\
+```.tr <language_code>``` (as a reply to target message)\
 \nUsage: Translate target message to another language.\
 \nClick [here](https://meta.wikimedia.org/wiki/Template:List_of_language_names_ordered_by_code) to see a detailed list of all language codes.\
 "

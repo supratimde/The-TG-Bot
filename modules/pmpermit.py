@@ -21,22 +21,23 @@ THETGBOT_USER_BOT_NO_WARN = "\
 "
 
 
-
 @client.on(events(outgoing=True, func=lambda e: e.is_private))
 async def auto_approve(event):
-    #sanity check here
-    #if any outgoing text contain bot module invocator then do not autoapprove
-    #for eg if outgoing text has .xyz then due to . current chat wont be auto approved
     if "block" in event.text or "disapprove" in event.text:
         return False
     reason = "auto_approve"
     chat = await event.get_chat()
     if ENV.ANTI_PM_SPAM:
         if not is_approved(chat.id):
+            if chat.id in client.storage.PM_WARNS:
+                del client.storage.PM_WARNS[chat.id]
+            if chat.id in client.storage.PREV_REPLY_MESSAGE:
+                await client.storage.PREV_REPLY_MESSAGE[chat.id].delete()
+                del client.storage.PREV_REPLY_MESSAGE[chat.id]
             approve(chat.id, reason)
             logger.info("Auto approved user: " + str(chat.id))
-                  
-                  
+
+
 @client.on(events(incoming=True, func=lambda e: e.is_private))
 async def monitorpms(event):
     sender = await event.get_sender()
@@ -92,6 +93,7 @@ async def approve_pm(event):
                 await asyncio.sleep(3)
                 await event.delete()
 
+
 @client.on(events("block ?(.*)"))
 async def approve_p_m(event):
     if event.fwd_from:
@@ -123,7 +125,6 @@ async def disapprove_pm(event):
                 logger.info("Disapproved user: " + str(chat.id))
 
 
-
 @client.on(events("listpms?"))
 async def approve_p_m(event):
     if event.fwd_from:
@@ -139,17 +140,17 @@ async def approve_p_m(event):
     if len(APPROVED_PMs) > ENV.MAX_MESSAGE_SIZE_LIMIT:
         # fixed by authoritydmc
         out_file_name = "approved_pms.txt"
-        output_file_ref=None
-        with open(out_file_name,"w") as f:
+        output_file_ref = None
+        with open(out_file_name, "w") as f:
             f.write(APPROVED_PMs)
-            output_file_ref=f.name
+            output_file_ref = f.name
         await client.send_file(
             event.chat_id,
             output_file_ref,
             force_document=True,
             allow_cache=False,
             caption="Current Approved PMs",
-            
+
         )
         await event.delete()
         os.remove(output_file_ref)
