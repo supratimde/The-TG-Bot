@@ -199,6 +199,3 @@ ENV.HELPER.update({"drive": f"\
 \nGet them client id and secret from https://console.developers.google.com/\
 \nVisit {TELEGRAPH_LINK} for more information about how to set this up.\
 "})
-on about how to set this up.\
-"})
-
