@@ -5,7 +5,7 @@ import emoji
 from googletrans import Translator
 
 
-@client.on(register("tr ?(.*)"))
+@client.on(events("tr ?(.*)"))
 async def handler(event):
     if event.fwd_from:
         return
@@ -33,10 +33,12 @@ async def handler(event):
         logger.info(str(ex))
 
 
-Config.HELPER.update({
+ENV.HELPER.update({
     "translate": "\
 ```.tr <language_code>``` [as a reply to target message]\
 \nUsage: Translate target message to another language.\
 \nClick [here](https://meta.wikimedia.org/wiki/Template:List_of_language_names_ordered_by_code) to see a detailed list of all language codes.\
 "
 })
+)
+

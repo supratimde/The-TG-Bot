@@ -5,7 +5,7 @@ import asyncio
 
 
 
-@client.on(register("purge ?(.*)"))
+@client.on(events("purge ?(.*)"))
 async def purge(event):
     if event.fwd_from:
         return
@@ -37,9 +37,11 @@ async def purge(event):
             await event.edit("**PURGE** Failed!")
 
 
-Config.HELPER.update({
+ENV.HELPER.update({
     "purge": "\
 ```.purge (as a reply to a msg)```\
 \nUsage: Purge all msgs until the target message.\
 "
 })
+)
+

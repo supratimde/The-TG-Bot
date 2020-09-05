@@ -7,7 +7,7 @@ from telethon.tl import functions, types
 
 
 
-@client.on(register("lock( (?P<target>\S+)|$)"))
+@client.on(events("lock( (?P<target>\S+)|$)"))
 async def handler(event):
      # Space weirdness in regex required because argument is optional and other
      # commands start with ".lock"
@@ -81,7 +81,7 @@ async def handler(event):
             )
 
 
-@client.on(register("unlock ?(.*)"))
+@client.on(events("unlock ?(.*)"))
 async def handler(event):
     if event.fwd_from:
         return
@@ -98,7 +98,7 @@ async def handler(event):
         )
 
 
-@client.on(register("curenabledlocks"))
+@client.on(events("curenabledlocks"))
 async def handler(event):
     if event.fwd_from:
         return
@@ -232,4 +232,7 @@ async def handler(event):
                         break
 
 
-Config.HELPER.update({"locks": "```.lock <specify_item_to_lock>```\nUsage: Locks a specified lockable.\nList of items:\nmsg, media, sticker, gif, gamee, ainline, gpoll, adduser, cpin, changeinfo, bots, commands, email, forward, url"})
+ENV.HELPER.update({"locks": "```.lock <specify_item_to_lock>```\nUsage: Locks a specified lockable.\nList of items:\nmsg, media, sticker, gif, gamee, ainline, gpoll, adduser, cpin, changeinfo, bots, commands, email, forward, url"})
+)
+)
+)

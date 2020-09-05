@@ -7,7 +7,7 @@ from PIL import Image
 from telethon import events
 
 
-@client.on(register(pattern="quotly ?(.*)"))
+@client.on(events(pattern="quotly ?(.*)"))
 async def handler(event):
     if event.fwd_from:
         return
@@ -47,9 +47,11 @@ async def silently_send_message(conv, text):
     return response
 
 
-Config.HELPER.update({
+ENV.HELPER.update({
     "quotly": "\
 ```.quotly <text_to_quote> [or as a reply to a message to quote]```\
 \nUsage: Quotes the target message.\nUses @QuotLyBot.\
 "
 })
+)
+

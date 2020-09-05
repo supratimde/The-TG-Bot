@@ -1,7 +1,7 @@
 import os
 
 
-class Config(object):
+class ENV(object):
     LOGGER = True
     MAX_MESSAGE_SIZE_LIMIT = 4095  # TG API Limit
     LOAD = []
