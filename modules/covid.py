@@ -31,5 +31,3 @@ ENV.HELPER.update({"covid": "\
 `.covid <country>`\
 \n\nUsage: Fetches latest covid19 statistics for a specific country using @HarukaAyaBot\
 "})
-)
-

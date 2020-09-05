@@ -100,7 +100,3 @@ ENV.HELPER.update({
 \nUsage: Memifies the image/sticker/gif.\
 "
 })
-
-"
-})
-

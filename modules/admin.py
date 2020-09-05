@@ -349,10 +349,3 @@ ENV.HELPER.update({
 \nUsage: pins target msg.\
 "
 })
- msg.\
-"
-})
-
- msg.\
-"
-})

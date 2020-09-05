@@ -85,5 +85,3 @@ ENV.HELPER.update({"clone": "\
 \n\n`.clone -d/-del`\
 \nUsage: Delete your profile's backup on your own risk.\
 "})
-)
-

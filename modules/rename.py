@@ -74,7 +74,3 @@ ENV.HELPER.update({
 \nUsage: Renames the target file to <new_file_name>.\
 "
 })
->.\
-"
-})
-

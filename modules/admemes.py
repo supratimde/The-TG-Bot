@@ -46,5 +46,3 @@ ENV.HELPER.update({
 \nUsage: Mention admins in the current chat.\
 "
 })
-)
-

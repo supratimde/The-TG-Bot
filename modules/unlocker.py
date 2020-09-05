@@ -63,6 +63,3 @@ Usage: Worksaround bot \"admin-only\" locks in chats.\
 \n\nYou need to add a chat to `UNLOCKED_CHATS` enviroment variable for this to take effect in those chats.\
 "
 })
-
-})
-})

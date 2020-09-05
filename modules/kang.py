@@ -364,8 +364,3 @@ ENV.HELPER.update({
 \nTo use a custom kang pack name, set env variable `STICKER_PACK`.\
 "
 })
-e `STICKER_PACK`.\
-"
-})
-
-})

@@ -21,5 +21,3 @@ ENV.HELPER.update({
 \nUsage: Check your internet connection's ping speed.\
 "
 })
-)
-

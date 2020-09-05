@@ -116,5 +116,3 @@ ENV.HELPER.update({
 \nUsage: Clean all zombie account from the current chat.\
 "
 })
-)
-

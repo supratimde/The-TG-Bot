@@ -41,5 +41,3 @@ ENV.HELPER.update({
 \n`{themes}`\
 "
 })
-)
-

@@ -60,7 +60,3 @@ ENV.HELPER.update({
 \nUsage: Pastes the target message to del.dog.\
 "
 })
-g.\
-"
-})
-

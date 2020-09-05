@@ -50,4 +50,4 @@ ENV.HELPER.update({
     "github": "\
 ```.github <username>```\
 \nUsage: Get information about any user on GitHub\
-"})"})})
+"})

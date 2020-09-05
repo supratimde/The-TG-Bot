@@ -2,7 +2,8 @@
 # By Priyam Kalra
 # Syntax (.say <text_to_print>)
 
-from asyncio improt sleep
+import time
+
 
 
 @client.on(events(pattern="say ?(.*)"))
@@ -20,7 +21,7 @@ async def handler(event):
         output += f"{strings[count]}\n"
         count += 1
         await event.edit(output)
-        sleep(0.25)
+        time.sleep(0.25)
 
 ENV.HELPER.update({
     "say": "\

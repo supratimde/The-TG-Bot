@@ -70,6 +70,3 @@ ENV.HELPER.update({"android": "\
 \n\n```.twrp <codename>```\
 \nUsage: Get latest twrp download for android device.\
 "})
-)
-
-)

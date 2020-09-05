@@ -287,7 +287,3 @@ ENV.HELPER.update({
 \nUsage: Downloads the torrent to the local machine.\
 "
 })
-hine.\
-"
-})
-

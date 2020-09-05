@@ -43,5 +43,3 @@ ENV.HELPER.update({
 \nUsage: Purge all msgs until the target message.\
 "
 })
-)
-

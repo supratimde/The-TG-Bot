@@ -98,8 +98,3 @@ ENV.HELPER.update({
 \nUsage: Prints the list of notes saved in the current chat.\
 "
 })
-
-})
-})
-
-})

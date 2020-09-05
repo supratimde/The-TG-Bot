@@ -25,5 +25,3 @@ ENV.HELPER.update({"lmgtfy": "\
 `.lmgtfy <query>`\
 \nUsage: A guide on how to search on google.\
 "})
-)
-

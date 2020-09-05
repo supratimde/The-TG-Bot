@@ -81,6 +81,3 @@ ENV.HELPER.update({
 \nUsage: Evaluate python code.\
 "
 })
-
-})
-

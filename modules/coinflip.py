@@ -38,5 +38,3 @@ ENV.HELPER.update({
 \nUsage: Flips a virtual coin and returns the outcome, test your luck!\
 "
 })
-)
-

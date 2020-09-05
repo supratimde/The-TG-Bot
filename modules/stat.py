@@ -46,5 +46,3 @@ ENV.HELPER.update({
 \nUsage: Print your own use statistics.\
 "
 })
-)
-

@@ -167,8 +167,4 @@ ENV.HELPER.update({
 \n\n```.getpms```\
 \nUsage: Get approved PMs.\
 "
-})nUsage: Get approved PMs.\
-"
-})PMs.\
-"
 })

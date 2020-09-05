@@ -95,6 +95,3 @@ ENV.HELPER.update({
 \nTIP: You need to set `LOGGER_GROUP` ENV variable for proper fucntioning.\
 "
 })
-)
-)
-)

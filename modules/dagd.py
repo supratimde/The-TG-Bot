@@ -42,6 +42,3 @@ ENV.HELPER.update({
 \nUsage: Unshorten a da.gd link.\
 "
 })
-)
-
-)

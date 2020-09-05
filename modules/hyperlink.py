@@ -25,5 +25,3 @@ ENV.HELPER.update({
 \nUsage: Generate a hyperlink using the provided link.\
 "
 })
-)
-

@@ -40,5 +40,3 @@ ENV.HELPER.update({
 \nClick [here](https://meta.wikimedia.org/wiki/Template:List_of_language_names_ordered_by_code) to see a detailed list of all language codes.\
 "
 })
-)
-

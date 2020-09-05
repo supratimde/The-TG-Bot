@@ -164,6 +164,3 @@ ENV.HELPER.update({
 \nUsage: Upload a directory from your local machine.\
 "
 })
-
-})
-})

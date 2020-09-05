@@ -43,5 +43,3 @@ ENV.HELPER.update({
 \nUsage: Spams the replied message.\
 "
 })
-)
-

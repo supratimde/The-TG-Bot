@@ -15,4 +15,3 @@ async def handler(message):
 async def restart():
     await client.disconnect()
     os.execl(sys.executable, sys.executable, *sys.argv)
-

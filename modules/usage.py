@@ -79,4 +79,4 @@ ENV.HELPER.update({"usage": "\
 \nCopy and paste that in ENV variable `HEROKU_API_KEY`\
 \n**`TG_APP_NAME` ENV variable is not mandatory but will make the output look better:**\
 \nSimply copy and paste the bot app name in ENV variable TG_APP_NAME\
-"})                                        
+"})                       

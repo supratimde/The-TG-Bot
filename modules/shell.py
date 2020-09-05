@@ -50,6 +50,3 @@ ENV.HELPER.update({
 \nUsage: Your own personal shell, all inouts are evaluated with subprocess.run().\
 "
 })
-
-})
-

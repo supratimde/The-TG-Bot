@@ -53,5 +53,3 @@ ENV.HELPER.update({
 \nUsage: Quotes the target message.\nUses @QuotLyBot.\
 "
 })
-)
-

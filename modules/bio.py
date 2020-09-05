@@ -47,6 +47,3 @@ ENV.HELPER.update({
 \nUsage: Updates the user's bio to <text> with the date and time of modification.\
 "
 })
-
-})
-

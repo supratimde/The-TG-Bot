@@ -146,5 +146,3 @@ ENV.HELPER.update({
 \nUsage: Get statistics of the a user.\
 "
 })
-)
-

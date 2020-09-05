@@ -96,5 +96,3 @@ ENV.HELPER.update({
 \ntext: Send test results as a text message.\
 \nDefault mode: text."
 })
-)
-

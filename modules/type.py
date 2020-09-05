@@ -31,5 +31,3 @@ ENV.HELPER.update({
 \nUsage: Type text with a fancy typing animation.\
 "
 })
-)
-

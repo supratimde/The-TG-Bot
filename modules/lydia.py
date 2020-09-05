@@ -133,7 +133,3 @@ ENV.HELPER.update({
 \nUsage: Lists all users on which LydiaAI is enabled.\
 "
 })
-AI is enabled.\
-"
-})
-})

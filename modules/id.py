@@ -27,5 +27,3 @@ ENV.HELPER.update({
 \nUsage: Prints the current chat id and target user id.\
 "
 })
-)
-

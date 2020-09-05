@@ -65,6 +65,3 @@ ENV.HELPER.update({
 \nUsage: Same as default .quotify but intends everyword.\
 "
 })
-
-})
-

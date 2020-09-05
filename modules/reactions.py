@@ -118,7 +118,3 @@ Just some funny little animations ;)\
 \n{unpacked_ascii}\
 "
 })
-)
-"
-})
-)

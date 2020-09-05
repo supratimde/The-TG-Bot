@@ -94,7 +94,3 @@ ENV.HELPER.update({
 \nUsage: Downloads the file to thelocal download directory.\
 "
 })
-tory.\
-"
-})
-

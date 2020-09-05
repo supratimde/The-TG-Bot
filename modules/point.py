@@ -19,5 +19,3 @@ ENV.HELPER.update({
 \nUsage: Point at some text to get attention in a group chat.\
 "
 })
-)
-

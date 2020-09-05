@@ -25,6 +25,3 @@ ENV.HELPER.update({
 \nUsage:  Simply log the replied msg to logger group.\
 "
 })
-
-})
-

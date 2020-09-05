@@ -233,6 +233,3 @@ async def handler(event):
 
 
 ENV.HELPER.update({"locks": "```.lock <specify_item_to_lock>```\nUsage: Locks a specified lockable.\nList of items:\nmsg, media, sticker, gif, gamee, ainline, gpoll, adduser, cpin, changeinfo, bots, commands, email, forward, url"})
-)
-)
-)

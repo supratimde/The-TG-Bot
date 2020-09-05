@@ -43,5 +43,3 @@ ENV.HELPER.update({"curtana": "\
 \nUsage: Returns the latest lrtwrp build.\
 \n\nUsing .curtana rom / .curtana kernel will return latest rom or kernel.\
 "})
-)
-

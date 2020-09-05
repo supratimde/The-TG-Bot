@@ -41,5 +41,3 @@ ENV.HELPER.update({
 \nUsage: Returns all the bots in the current chat.\
 "
 })
-)
-

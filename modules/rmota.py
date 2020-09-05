@@ -47,5 +47,3 @@ ENV.HELPER.update({
 \nUsage: Returns latest update info for specified device.\nUses @Realme_3ProBot to get update information.\
 "
 })
-)
-

@@ -28,5 +28,3 @@ ENV.HELPER.update({
 ```.ud <keyword>```\
 \nUsage: Search UrbanDictionary for a selected keyword.\
 "})
-)
-

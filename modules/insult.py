@@ -71,7 +71,3 @@ ENV.HELPER.update({
 \nUsage: Insults target user.\
 "
 })
-
-"
-})
-
