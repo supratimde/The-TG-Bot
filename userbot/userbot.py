@@ -89,7 +89,7 @@ class Userbot(TelegramClient):
         mod.humanbytes = humanbytes
         mod.progress = progress
         mod.time_formatter = time_formatter
-        mod.build = f"The-TG-Bot-v3{time.strftime('%d%m%Y', time.localtime(os.stat('modules').st_mtime))}"
+        mod.build = f"The-TG-Bot-v3{time.strftime('%d%m%Y', time.localtime(os.stat('./').st_mtime))}"
         mod.me = self.me
         mod.logger = logging.getLogger(shortname)
         mod.ENV = self.env

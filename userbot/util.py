@@ -13,10 +13,9 @@ from telethon.tl.functions.messages import GetPeerDialogsRequest
 
 ENV = bool(os.environ.get("ENV", False))
 if ENV:
-    from production import ENV
+    from env import ENV
 else:
-    if os.path.exists("development.py"):
-        from development import ENV
+    from env import _ENV as ENV
 
 
 def sync(self, func, *args, **kwargs):

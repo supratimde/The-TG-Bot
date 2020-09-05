@@ -18,13 +18,7 @@ ENV = bool(os.environ.get("ENV", False))
 if ENV:
     from env import ENV
 else:
-    if os.path.exists("development.py"):
-        from env import ENV
-    else:
-        logging.warning("No env.py Found!")
-        logging.info(
-            "Please run the command, again, after creating env.py.")
-        sys.exit(1)
+    from env import _ENV as ENV
 
 
 if ENV.DB_URI is None:
