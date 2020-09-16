@@ -1,5 +1,7 @@
+import asyncio
 import random
-from uniborg.util import admin_cmd
+import sys
+import time
 
 
 @borg.on(admin_cmd(pattern="modi ?(.*)", allow_sudo=True))
